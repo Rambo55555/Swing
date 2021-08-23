@@ -74,6 +74,10 @@ class MenuVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             let contentView = EmojiMemoryGameView(game: game)
             let vc = UIHostingController(rootView: contentView)
             self.navigationController?.pushViewController(vc, animated: true)
+        } else if cellID == ItemName.Pictures {
+            let contentView = PictureBrowseView()
+            let vc = UIHostingController(rootView: contentView)
+            self.navigationController?.pushViewController(vc, animated: true)
         } else {
             let alertController = UIAlertController(title: "提示", message: "这是第\(indexPath.row)个cell", preferredStyle: UIAlertController.Style.alert)
             let cancelAction = UIAlertAction(title: "取消", style: UIAlertAction.Style.cancel, handler: nil)

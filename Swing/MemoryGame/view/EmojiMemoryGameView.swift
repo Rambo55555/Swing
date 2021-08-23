@@ -25,7 +25,6 @@ struct EmojiMemoryGameView: View {
             }
             deckBody
         }
-        
     }
     
     @State private var dealt = Set<Int>()
