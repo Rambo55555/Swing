@@ -18,6 +18,6 @@ class PictureBrowseVM: ObservableObject {
     }
     
     private static func createModel(_ nameArr: Array<String>) -> PictureModel {
-        return PictureModel(nameArr)
+        return PictureModel()
     }
 }

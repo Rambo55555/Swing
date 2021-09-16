@@ -23,6 +23,7 @@ struct ScrollVGrid<Item, ItemView>: View where Item: Identifiable, ItemView: Vie
     
     var body: some View {
         GeometryReader { geometry in
+            // MARK: - ScrollView必须和LazyVGrid放在一起，不一起就会导致height=10，原因未知
             ScrollView(.vertical) {
                 VStack {
                     let width: CGFloat = fitWidth(size: geometry.size)
